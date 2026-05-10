@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+// import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
+import { createHashRouter } from "react-router-dom";
 import './App.css'
 import Layout from './components/Layout/Layout'
 import Home from './components/Home/Home'
@@ -20,7 +22,7 @@ import AllOrders from './components/allorders/allorders'
 
 function App() {
 
-  let paths = createBrowserRouter([
+  let paths = createHashRouter([
     {path:'', element:<Layout/> , children:[
       {index:'/', element: <Home/>},
       {path:'products', element: <ProtectedRoutes> <Products/> </ProtectedRoutes>},
@@ -38,7 +40,7 @@ function App() {
   return (
     <CartContextProvider>
     <UserContextProvider>
-     <RouterProvider router = {paths}></RouterProvider>
+     <HashProvider router = {paths}></HashProvider>
      <Toaster/>
     </UserContextProvider>
     </CartContextProvider>
