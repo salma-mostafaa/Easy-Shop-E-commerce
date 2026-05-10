@@ -19,7 +19,7 @@ export default function Navbar() {
    const isHomePage = location.pathname === '/'
 
   return (
-    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-0  ${isHomePage ? ' hover:bg-gray-800'  : 'bg-white'}  `}
+    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-0  ${isHomePage ? ' bg-dark'  : 'bg-white'}  `}
     style={{position: "absolute", top: "0", opacity: "1", width: "100% ", backgroundColor:"transparent"}} >
       <div className="container">
 
