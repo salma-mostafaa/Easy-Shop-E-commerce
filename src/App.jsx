@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import { HashRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import { createHashRouter } from "react-router-dom";
 import './App.css'
 import Layout from './components/Layout/Layout'
@@ -40,7 +40,7 @@ function App() {
   return (
     <CartContextProvider>
     <UserContextProvider>
-     <HashRouter router = {paths}></HashRouter>
+     <RouterProvider router = {paths}></RouterProvider>
      <Toaster/>
     </UserContextProvider>
     </CartContextProvider>
