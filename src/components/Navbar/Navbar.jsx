@@ -19,7 +19,7 @@ export default function Navbar() {
    const isHomePage = location.pathname === '/'
 
   return (
-    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-0  ${isHomePage ? ' bg-dark'  : 'bg-white'}  `}
+    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-2  ${isHomePage ? 'bg-transparent'  : 'bg-white'}  `}
     style={{position: "absolute", top: "0", opacity: "1", width: "100% ", backgroundColor:"transparent"}} >
       <div className="container">
 
@@ -31,7 +31,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="mainNav" >
+        <div className={`collapse navbar-collapse ${isHomePage ? 'bg-dark'  : 'bg-white'}`}  id="mainNav" >
 
           {isLogin &&  (
             <ul className="navbar-nav me-auto gap-1" >
