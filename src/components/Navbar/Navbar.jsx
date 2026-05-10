@@ -35,16 +35,16 @@ export default function Navbar() {
 
           {isLogin &&  (
             <ul className="navbar-nav me-auto gap-1" >
-              <li className="nav-item"><NavLink to="/"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Home</NavLink></li>
-              <li className="nav-item"><NavLink to="/products"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Products</NavLink></li>
-              <li className="nav-item"><NavLink to="/brands"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Brands</NavLink></li>
+              <li className="nav-item"><NavLink to="/"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800'  : 'text-dark bg-white'}`}>Home</NavLink></li>
+              <li className="nav-item"><NavLink to="/products"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Products</NavLink></li>
+              <li className="nav-item"><NavLink to="/brands"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Brands</NavLink></li>
               <li className="nav-item position-relative">
-                <NavLink to="/carts"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>
+                <NavLink to="/carts"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800 ' : 'text-dark bg-white'}`}>
                   Cart
                   <span className="badge bg-warning text-dark ms-1 rounded-circle">{cartNumber}</span>
                 </NavLink>
               </li>
-              <li className="nav-item"><NavLink to="/allorders"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Orders</NavLink></li>
+              <li className="nav-item"><NavLink to="/allorders"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Orders</NavLink></li>
             </ul>
           )}
 
