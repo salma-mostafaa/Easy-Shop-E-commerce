@@ -1,0 +1,60 @@
+.logo {
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+
+.logout {
+  background: transparent;
+  border: 1.5px solid #c91195;
+  color: #c91195;
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+/* hover effect */
+.logout:hover {
+  background: #c91195;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 17, 149, 0.35);
+}
+
+/* shine layer */
+.logout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+}
+
+/* shine animation on hover */
+.logout:hover::before {
+  animation: logoutShine 0.7s ease forwards;
+}
+
+/* shine keyframe */
+@keyframes logoutShine {
+  0% {
+    left: -80%;
+  }
+  100% {
+    left: 130%;
+  }
+}

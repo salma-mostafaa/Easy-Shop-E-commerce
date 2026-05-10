@@ -1,0 +1,27 @@
+.container{
+    padding-top: 140px;
+    padding-bottom: 20px;
+}
+.brands-title {
+    color: #ac258f; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.brand-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.brand-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.image-wrapper {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

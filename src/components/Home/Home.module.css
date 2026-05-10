@@ -1,0 +1,120 @@
+.home {
+  display: flex;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('../../assets/images/back.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* HERO CONTAINER */
+.hero {
+  max-width: 650px;
+}
+
+/* ===================== */
+/* H1 SMOOTH ANIMATION */
+/* ===================== */
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+
+  opacity: 0;
+  transform: translateY(25px) scale(0.98);
+  animation: heroTitle 1s ease-out forwards;
+}
+
+@keyframes heroTitle {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===================== */
+/* PARAGRAPH */
+/* ===================== */
+
+.hero p {
+  color: #e0c8f8;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.7;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.hero button {
+  background-color: #a80e7c;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1.4s ease-out forwards;
+  animation-delay: 0.7s;
+}
+
+/* hover lift + glow */
+.hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(168, 14, 124, 0.4);
+}
+
+/* shine layer */
+.hero button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+}
+
+/* shine animation */
+.hero button:hover::before {
+  animation: shineMove 0.8s ease forwards;
+}
+
+@keyframes shineMove {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+
