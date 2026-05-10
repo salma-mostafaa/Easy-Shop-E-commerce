@@ -1,4 +1,4 @@
-# 🛒 FreshCart — React E-Commerce App
+# 🛒 EasyShop — React E-Commerce App
 
 A fully functional e-commerce single-page application built with **React 19** and **Vite**. Users can browse products, manage their cart, and complete purchases through an online checkout session — all backed by the [Route Misr E-Commerce API](https://ecommerce.routemisr.com).
 
