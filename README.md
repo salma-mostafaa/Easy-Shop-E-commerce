@@ -6,7 +6,7 @@ A fully functional e-commerce single-page application built with **React 19** an
 
 ## 🚀 Live Demo
 
-> *(Add your GitHub Pages or deployment URL here)*
+> *https://salma-mostafaa.github.io/Easy-Shop-E-commerce/*
 
 ---
 
