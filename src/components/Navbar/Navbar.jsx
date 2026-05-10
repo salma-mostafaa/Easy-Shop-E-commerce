@@ -19,7 +19,7 @@ export default function Navbar() {
    const isHomePage = location.pathname === '/'
 
   return (
-    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-0  `}
+    <nav className={`navbar navbar-expand-lg  shadow-sm sticky-top py-0  ${isHomePage ? ' hover:bg-gray-800'  : 'bg-white'}  `}
     style={{position: "absolute", top: "0", opacity: "1", width: "100% ", backgroundColor:"transparent"}} >
       <div className="container">
 
@@ -35,16 +35,16 @@ export default function Navbar() {
 
           {isLogin &&  (
             <ul className="navbar-nav me-auto gap-1" >
-              <li className="nav-item"><NavLink to="/"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800'  : 'text-dark bg-white'}`}>Home</NavLink></li>
-              <li className="nav-item"><NavLink to="/products"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Products</NavLink></li>
-              <li className="nav-item"><NavLink to="/brands"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Brands</NavLink></li>
+              <li className="nav-item"><NavLink to="/"  className={`nav-link ${isHomePage ? 'text-white'  : 'text-dark'}`}>Home</NavLink></li>
+              <li className="nav-item"><NavLink to="/products"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Products</NavLink></li>
+              <li className="nav-item"><NavLink to="/brands"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Brands</NavLink></li>
               <li className="nav-item position-relative">
-                <NavLink to="/carts"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800 ' : 'text-dark bg-white'}`}>
+                <NavLink to="/carts"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>
                   Cart
                   <span className="badge bg-warning text-dark ms-1 rounded-circle">{cartNumber}</span>
                 </NavLink>
               </li>
-              <li className="nav-item"><NavLink to="/allorders"  className={`nav-link ${isHomePage ? 'text-white  hover:bg-gray-800' : 'text-dark bg-white'}`}>Orders</NavLink></li>
+              <li className="nav-item"><NavLink to="/allorders"  className={`nav-link ${isHomePage ? 'text-white' : 'text-dark'}`}>Orders</NavLink></li>
             </ul>
           )}
 
