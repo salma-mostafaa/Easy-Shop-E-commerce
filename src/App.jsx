@@ -40,7 +40,7 @@ function App() {
   return (
     <CartContextProvider>
     <UserContextProvider>
-     <HashProvider router = {paths}></HashProvider>
+     <HashRouter router = {paths}></HashRouter>
      <Toaster/>
     </UserContextProvider>
     </CartContextProvider>
