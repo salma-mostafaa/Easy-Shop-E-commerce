@@ -14,7 +14,7 @@ export default function Checkout() {
   axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}`,
    {'shippingAddress' : formData},
     { headers : headers,
-      params : {url: 'http://localhost:5173'}
+      params : {url: 'https://salma-mostafaa.github.io/Easy-Shop-E-commerce/'}
      })
       .then((response) =>{console.log('checkout', response)
         location.href = response.data.session.url
