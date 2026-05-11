@@ -31,7 +31,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse py-3 px-3 rounded-3 ${isHomePage ? 'bg-dark '  : 'bg-white'}`}  id="mainNav" >
+        <div className={`collapse navbar-collapse py-3 px-3 rounded-3`} style={{ backgroundColor: isHomePage ? "black" : "white" }}id="mainNav" >
 
           {isLogin &&  (
             <ul className="navbar-nav me-auto gap-1" >
